@@ -14,7 +14,7 @@ pipeline {
 
     stage('Docker Build') {
       steps {
-        sh 'docker build -t dmoore31/flask app .'
+        sh 'docker build -t dmoore31/flask_app .'
       }
     }
 
