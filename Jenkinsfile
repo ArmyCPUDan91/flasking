@@ -5,6 +5,7 @@ pipeline {
     registryCredentials = "docker"
     cluster_name = "skillstorm"
   }
+
   agent {
     node {
       label 'docker'
@@ -35,3 +36,5 @@ pipeline {
         }
       }
     }
+  }
+}
