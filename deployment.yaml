@@ -40,18 +40,18 @@ spec:
 apiVersion: v1 
 kind: Service 
 metadata: 
-  name: flaskcontainer 
+  name: dmoore31flask
   namespace: dmoore31
 spec: 
   selector: 
-    app: flaskcontainer 
+    app: dmoore31flask 
   type: LoadBalancer 
   sessionAffinity: None 
   sessionAffinityConfig: 
     clientIP: 
       timeoutSeconds: 10800 
   ports: 
-  - name: flaskcontainer 
+  - name: dmoore31flask
     protocol: TCP 
     port: 80 
     targetPort: 5000 
