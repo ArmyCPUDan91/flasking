@@ -1,14 +1,14 @@
 apiVersion: apps/v1 
 kind: Deployment 
 metadata: 
-  name: flaskcontainer 
+  name: dmoore31flask
   namespace: dmoore31
   labels: 
-    app:  flaskcontainer 
+    app:  dmoore31flask 
 spec: 
   selector: 
     matchLabels: 
-      app: flaskcontainer 
+      app: dmoore31flask
   replicas: 1 
   strategy: 
     rollingUpdate: 
@@ -18,10 +18,10 @@ spec:
   template: 
     metadata: 
       labels: 
-        app:  flaskcontainer 
+        app:  dmoore31flask
     spec: 
       containers: 
-      - name:  flaskcontainer 
+      - name:  dmoore31flask
         image:  dmoore31/flask_app 
         resources: 
           requests: 
@@ -32,7 +32,7 @@ spec:
             memory: 100Mi 
         ports: 
         - containerPort:  5000 
-          name:  flaskcontainer 
+          name:  dmoore31flask 
         imagePullPolicy: Always 
       restartPolicy: Always 
  
